@@ -1,0 +1,42 @@
+@font-face {
+  font-family: bloodcrow;
+  src: url(/assets/fonts/bloodcrow.ttf);
+}
+body {
+  font-family: bloodcrow !important;
+}
+.bg {
+  height: 100vh;
+  background-image: url(/assets/images/background.png);
+  background-size: cover;
+}
+
+/* Flashlight Overlay */
+:root {
+  cursor: none;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+:root:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 10vmax at var(--cursorX) var(--cursorY),
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 600px) {
+}
