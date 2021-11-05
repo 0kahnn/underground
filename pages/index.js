@@ -40,7 +40,7 @@ const Home = () => {
       <div className="container-fluid p-0 ">
         <PcLayout />
         {/* Mobile version */}
-        <MobileLayout />
+        {/* <MobileLayout /> */}
       </div>
     </div>
   );
