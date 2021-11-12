@@ -42,7 +42,7 @@ const PcLayout = (props) => {
 
   return (
     // <div className="row w-100 m-0 d-none d-md-flex">
-    <div className="row w-100 m-0 d-md-flex">
+    <div className="row w-100 m-0 ">
       <div className="bg">
         {/* <img src="/assets/images/torch.png" id="torch" /> */}
         <Joystick
