@@ -9,11 +9,28 @@ body {
   height: 100vh;
   background-image: url(/assets/images/background.png);
   background-size: cover;
+  /* positioning joystick */
+
+  display: flex;
+  align-items: self-end;
+  justify-content: center;
+}
+.bg div {
+  z-index: 999;
+}
+
+#torch {
+  position: absolute;
+  width: 100px;
+}
+.controller {
+  position: absolute;
+  bottom: 0;
 }
 
 /* Flashlight Overlay */
 :root {
-  cursor: none;
+  /* cursor: none; */
   --cursorX: 50vw;
   --cursorY: 50vh;
 }
@@ -30,6 +47,9 @@ body {
     rgba(0, 0, 0, 0.5) 80%,
     rgba(0, 0, 0, 0.95) 100%
   );
+}
+
+:root:after {
 }
 
 @media screen and (max-width: 1000px) {
