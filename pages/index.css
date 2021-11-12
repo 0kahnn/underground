@@ -17,6 +17,7 @@ body {
   justify-content: center;
 }
 .bg div {
+  padding-bottom: 3rem !important;
   z-index: 999;
 }
 

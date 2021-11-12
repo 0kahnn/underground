@@ -23,8 +23,8 @@ const PcLayout = (props) => {
   const handleMove = (e) => {
     console.log("move", e);
 
-    let x = e.x * 15;
-    let y = -e.y * 25;
+    let x = e.x * 10;
+    let y = -e.y * 15;
     if (e.type == "move") {
       console.log("still movinggggggggggg");
     }
@@ -37,25 +37,29 @@ const PcLayout = (props) => {
   };
 
   const handleStop = (e) => {
+    document.documentElement.style.setProperty("--cursorX", "50vw");
+    document.documentElement.style.setProperty("--cursorY", "50vh");
+
     console.log("stop", e);
   };
 
   return (
     // <div className="row w-100 m-0 d-none d-md-flex">
-    <div className="row w-100 m-0 ">
+    <div className="row w-100 m-0 d-md-flex">
       <div className="bg">
         {/* <img src="/assets/images/torch.png" id="torch" /> */}
-        <Joystick
-          throttle="80"
-          size={70}
-          baseColor="red"
-          stickColor="#64649f"
-          move={handleMove}
-          start={handleStart}
-          start={handleStop}
-          className="controller"
-          style={{ position: "relative" }}
-        ></Joystick>
+        <div>
+          <Joystick
+            throttle="80"
+            size={70}
+            baseColor="red"
+            stickColor="#64649f"
+            move={handleMove}
+            start={handleStart}
+            stop={handleStop}
+            className="controller"
+          ></Joystick>
+        </div>
       </div>
     </div>
   );
