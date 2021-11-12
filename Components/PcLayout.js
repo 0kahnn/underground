@@ -11,8 +11,8 @@ const PcLayout = (props) => {
     // let y = e.clientY || e.touches[0].clientY;
     // console.log(x, y);
 
-    // document.documentElement.style.setProperty("--cursorX", x + "px");
-    // document.documentElement.style.setProperty("--cursorY", y + "px");
+    document.documentElement.style.setProperty("--cursorX", x + "px");
+    document.documentElement.style.setProperty("--cursorY", y + "px");
   }
 
   useEffect(() => {
@@ -21,14 +21,9 @@ const PcLayout = (props) => {
   }, []);
 
   const handleMove = (e) => {
-    console.log("move", e);
-
-    let x = e.x * 3;
-    let y = -e.y * 3;
-    if (e.type == "move") {
-      console.log("still movinggggggggggg");
-    }
-
+    let x = e.x * 2;
+    let y = -e.y * 2;
+    console.log("move", x, y);
     document.documentElement.style.setProperty("--cursorX", x + "vw");
     document.documentElement.style.setProperty("--cursorY", y + "vh");
   };
@@ -39,8 +34,6 @@ const PcLayout = (props) => {
   const handleStop = (e) => {
     document.documentElement.style.setProperty("--cursorX", "50vw");
     document.documentElement.style.setProperty("--cursorY", "50vh");
-
-    console.log("stop", e);
   };
 
   return (
@@ -50,7 +43,7 @@ const PcLayout = (props) => {
         {/* <img src="/assets/images/torch.png" id="torch" /> */}
         <div className="joystick">
           <Joystick
-            throttle="80"
+            throttle="10"
             size={70}
             baseColor="red"
             stickColor="#64649f"
