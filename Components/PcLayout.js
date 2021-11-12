@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Carousel } from "react-bootstrap";
-import SliderCrossFade from "./SliderCrossFade";
+
 import { Joystick } from "react-joystick-component";
 
 const PcLayout = (props) => {
   function update(e) {
-    // let x = e.clientX || e.touches[0].clientX;
     let x = e.clientX;
+    // let x = e.clientX;
+    // let y = e.clientY;
     let y = e.clientY;
-    // let y = e.clientY || e.touches[0].clientY;
-    // console.log(x, y);
+    console.log(x, y);
 
     document.documentElement.style.setProperty("--cursorX", x + "px");
     document.documentElement.style.setProperty("--cursorY", y + "px");
@@ -17,7 +17,7 @@ const PcLayout = (props) => {
 
   useEffect(() => {
     window.addEventListener("mousemove", update);
-    window.addEventListener("touchmove", update);
+    // window.addEventListener("touchmove", update);
   }, []);
 
   const handleMove = (e) => {
