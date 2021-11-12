@@ -16,8 +16,9 @@ body {
   align-items: flex-end;
   justify-content: center;
 }
-.bg div {
-  padding-bottom: 3rem !important;
+.joystick {
+  display: none;
+  /* padding-bottom: 3rem !important; */
   z-index: 999;
 }
 
@@ -58,6 +59,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .joystick {
+    display: block;
+    margin-bottom: 3rem !important;
+  }
 }
 
 @media screen and (max-width: 600px) {

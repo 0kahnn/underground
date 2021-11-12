@@ -23,14 +23,14 @@ const PcLayout = (props) => {
   const handleMove = (e) => {
     console.log("move", e);
 
-    let x = e.x * 10;
-    let y = -e.y * 15;
+    let x = e.x * 3;
+    let y = -e.y * 3;
     if (e.type == "move") {
       console.log("still movinggggggggggg");
     }
 
-    document.documentElement.style.setProperty("--cursorX", x + "px");
-    document.documentElement.style.setProperty("--cursorY", y + "px");
+    document.documentElement.style.setProperty("--cursorX", x + "vw");
+    document.documentElement.style.setProperty("--cursorY", y + "vh");
   };
   const handleStart = (e) => {
     console.log("start", e);
@@ -48,7 +48,7 @@ const PcLayout = (props) => {
     <div className="row w-100 m-0 d-md-flex">
       <div className="bg">
         {/* <img src="/assets/images/torch.png" id="torch" /> */}
-        <div>
+        <div className="joystick">
           <Joystick
             throttle="80"
             size={70}
